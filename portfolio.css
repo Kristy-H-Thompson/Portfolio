@@ -1,0 +1,302 @@
+/*# sourceMappingURL=mountain.css.map */
+
+body {
+    background-color: #FCFEF5;
+    font-family: 'Hind', sans-serif;
+    font-size:100%;
+    padding:0px;
+}
+
+h1 {
+    font-family: 'Forum', cursive;
+    font-size:240%;
+    font-weight: bolder;
+    margin:0px;
+}
+
+.side_bar_gradient span {
+    font-family: 'Forum', cursive;
+    font-size:140%;
+    font-weight: bold;
+    margin:0px;
+}
+
+h2{
+    font-family: 'Forum', cursive;
+    font-size:250%;
+    font-weight: bold;
+    margin:0px;
+}
+
+h3 {
+    font-family: 'Forum', cursive;
+    font-size:180%;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Hind', sans-serif;
+    font-size:100%;
+}
+nav {
+    margin-left:-12%;
+}
+nav li {
+    font-family: 'Hind', sans-serif;
+    font-size:105%;
+    list-style: none;
+}
+
+nav li a{
+    color:black;
+}
+
+nav li a:hover{
+    color:purple;
+}
+
+.main_grid {
+    display:grid;
+    gap:.5rem;
+    grid-template-columns: 27% 60%;
+    justify-content: space-evenly;    
+    margin:0px;
+    width:100vw;
+}    
+
+
+.side_bar {
+    background-image:url("https://images.unsplash.com/photo-1612211893937-bbdf77ab593b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+    background-size:cover;
+    filter: hue-rotate(50deg);
+    grid-column: span 1;
+    height:100vh;
+    min-width:300px;
+    padding:0px;
+    width:100%;
+}
+
+.side_bar_gradient {
+    background-image: linear-gradient(rgb(3, 85, 16,.2), rgb(3, 85, 16,.1));
+    box-sizing: border-box;
+    height:100%;
+    padding:1rem;
+    width: 100%;
+}
+
+main{
+    display:inline;
+    grid-column: span 1;
+    height:100vh;
+    padding:1rem;
+    overflow:auto;
+    width:100%;
+}
+
+#about{
+    height:100vh;
+    width:100%;
+}
+
+.about_me_grid {
+    display:grid;
+    gap:.5rem;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-evenly;
+    width:100%;
+}
+
+.about_me_image{
+    background-color: #5D8087;
+    border-radius:15%;
+    grid-column: span 1;
+    height:100%;
+    text-align: center;
+    width:100%;
+}
+
+.about_me_image img{
+    height:4rem;
+    margin:.5rem;
+    width:5rem;
+}
+
+#projects{
+    height:100vh;
+    width:100%;
+}
+
+.project_grid {
+    display:grid;
+    gap:3rem;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    margin-top:1rem;
+    width:90%;
+}
+
+.project_box{
+    border:1px solid black;
+    display:grid;
+    gap:.5rem;
+    grid-template-columns: auto auto;
+    grid-column: span 1;
+    height:auto;    
+    justify-content: space-evenly;
+    padding:1rem;
+    width:100%;
+}
+
+.project_explanation {
+    grid-column: span 2;
+    height:30vh;
+    margin-top:-20px;
+    overflow:auto;
+    padding:1rem;
+    width:90%;
+}
+
+.project_image {
+    grid-column: span 1;
+    height:5rem;
+    width:5rem;
+}
+
+
+.project_tech {
+    display:grid;
+    gap:2rem;
+    grid-column: span 2;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: center;
+    margin:1rem;
+    width:90%;
+}
+
+.project_tech_image{
+    display:inline;
+    height:2rem;
+    margin:3%;
+    width:2rem;
+    grid-column: span 1;
+
+}
+
+.project_buttons {
+    display: grid;
+    gap:1rem;
+    grid-column: span 2;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    margin:1.5rem;
+}
+
+.project_button{
+    grid-column: span 1;
+}
+
+.project_buttons button{
+    background-color:#46737A;
+    border: 1px solid black;
+    color:white;
+    font-family: 'Forum', cursive;
+    font-size:100%;
+    padding:.5rem;
+}
+
+.project_buttons button:hover{
+    background-color:#615C56;
+}
+
+
+#contact{
+    height:100vh;
+    width:100%;
+}
+
+.emailform{
+    background-color:#46737A;
+    border:1px solid #403C37;
+    border-radius:10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    color:black;
+    font-weight:500;
+    height:55vh;
+    justify-content: center;
+    margin-top:-40px;
+    padding:2rem;
+    width:80%;
+  }
+
+  .emailform fieldset {
+   border:none;
+   font-size:100%;
+   padding: 1rem;
+  }
+
+  .emailform label{
+   font-size:100%;
+   font-weight:bold;
+}
+
+ .emailform input{
+   border:none;
+   min-height:3vh;
+   width:100%;
+   }
+
+ .emailform textarea{
+   border:none;
+   min-height:15vh;
+   width:100%;
+ }
+
+ .button-box{
+   display:flex;
+   padding:0px;
+ }
+
+ .form-button{
+   background-color:#5D8087;
+   border:none;
+   border-radius:5px;
+   color:white;
+   display:inline-block;
+   font-size:105%;
+   margin:.6rem;
+   padding:.4rem;
+   
+ }
+ 
+ .form-button:hover{
+   background-color: #615C56;
+ }
+
+ .contact_grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    justify-content: space-around;
+    height:15vh;
+    margin-top:1rem;
+    width:90%;
+ }
+
+ .contact_image{
+    height:2rem;
+    grid-column: span 1;
+    width:2rem;
+ }
+
+ .contact_info {
+    grid-column: span 2;
+    text-align:left;
+ }
+
+ .solsticeClan_project {
+    display:inline;
+    grid-column: span 1;
+    height:100vh;
+    padding:1rem;
+    overflow:auto;
+    width:100%;
+ }
