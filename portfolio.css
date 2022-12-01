@@ -65,7 +65,6 @@ nav li a:hover{
     filter: hue-rotate(50deg);
     grid-column: span 1;
     height:100%;
-    min-width:300px;
     padding:0px;
     width:100%;
 }
