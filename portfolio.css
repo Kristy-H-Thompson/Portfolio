@@ -51,6 +51,7 @@ nav li a:hover{
 
 .main_grid {
     display:grid;
+    box-sizing: border-box;
     grid-template-columns: 25% 75%;
     height:95vh;
     justify-content:start;    
