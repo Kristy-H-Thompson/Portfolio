@@ -65,7 +65,7 @@ nav li a:hover{
     background-size:cover;
     filter: hue-rotate(50deg);
     grid-column: span 1;
-    height:90vh;
+    height:100%;
     min-width:300px;
     padding:0px;
     width:100%;
