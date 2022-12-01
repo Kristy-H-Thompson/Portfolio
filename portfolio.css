@@ -51,7 +51,7 @@ nav li a:hover{
 
 .main_grid {
     display:grid;
-    grid-template-columns: 27% 60%;
+    grid-template-columns: 27% 70%;
     height:95vh;
     justify-content:start;    
     margin:0px;
