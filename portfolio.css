@@ -60,9 +60,11 @@ nav li a:hover{
     display:grid;
     gap:.5rem;
     grid-template-columns: 27% 60%;
+    height:100vh;
     justify-content: space-evenly;    
     margin:0px;
     width:100vw;
+    overflow:hidden;
 }    
 
 .side_bar {
