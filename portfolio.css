@@ -51,10 +51,9 @@ nav li a:hover{
 
 .main_grid {
     display:grid;
-    gap:.5rem;
     grid-template-columns: 27% 60%;
     height:95vh;
-    justify-content: space-evenly;    
+    justify-content:start;    
     margin:0px;
     width:100vw;
     overflow:hidden;
