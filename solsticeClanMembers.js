@@ -419,7 +419,6 @@ function flagStatus() {
   }
 }
 
-  const form = document.forms['oFormObject']
 
 //Joining Form- Submit a Character
 const form = document.forms["SolsticeClanJoining"];
