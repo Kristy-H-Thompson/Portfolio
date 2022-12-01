@@ -5,14 +5,8 @@ var chars = [];
 
 
 //AJAX - helps to load characters faster
-window.onload = function() {
-  $.ajax({
-    crossOrigin: true,
-    url: scriptURL,
-    success: function(data) {
-      getText(data);
-      console.log('AJAX request completed successfully onload and information has been fetched from HG Database.')
-      const form = document.forms["SolsticeClanJoining"];
+window.onload = function() {      
+    const form = document.forms["SolsticeClanJoining"];
       //Setting up locations for all of the character ranks
     const priest_location = document.getElementById("priest");
     const sun_location = document.getElementById("scsuns");
@@ -22,6 +16,13 @@ window.onload = function() {
     const elder_location = document.getElementById("scelders");
     const gallery_location = document.getElementById("scgallery");
     const thisclanname = "SolsticeClan";
+  $.ajax({
+    crossOrigin: true,
+    url: scriptURL,
+    success: function(data) {
+      getText(data);
+      console.log('AJAX request completed successfully onload and information has been fetched from HG Database.')
+
     },
     dataType: 'text'
   });
