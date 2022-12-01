@@ -1,5 +1,6 @@
 body {
     background-color: #FCFEF5;
+    box-sizing: border-box;
     font-family: 'Hind', sans-serif;
     font-size:100%;
     padding:0px;
