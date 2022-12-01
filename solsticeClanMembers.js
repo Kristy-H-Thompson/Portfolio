@@ -12,6 +12,7 @@ window.onload = function() {
     success: function(data) {
       getText(data);
       console.log('AJAX request completed successfully onload and information has been fetched from HG Database.')
+      const form = document.forms["SolsticeClanJoining"];
     },
     dataType: 'text'
   });
