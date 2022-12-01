@@ -4,6 +4,8 @@ body {
     font-family: 'Hind', sans-serif;
     font-size:100%;
     padding:0px;
+    margin: 0;
+    height: 100%;
     
     --black: #1B1212;
     --white: #f8f8ff;
