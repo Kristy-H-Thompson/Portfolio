@@ -1,6 +1,6 @@
 
 //Script link and setting up the character array
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwOQk7eNyH0pgEJGN_3JhcS-ccm2WBZ7nO8mpLtMo9CrUVyv2Lc82yzUM-r0P6Tt6dYUw/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzsNEjjseObXABaBT4-6O8BTtUkMse-4KPY2XqCL4vpk8FaYBgMle5t4o3q4bRynybB/exec';
 var chars = [];
 
 
