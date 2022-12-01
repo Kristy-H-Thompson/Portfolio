@@ -419,8 +419,10 @@ function flagStatus() {
   }
 }
 
+  const form = document.forms['oFormObject']
+
 //Joining Form- Submit a Character
-const form = document.forms["Example Joining Form"];
+const form = document.forms["SolsticeClanJoining"];
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const bt = callme();
