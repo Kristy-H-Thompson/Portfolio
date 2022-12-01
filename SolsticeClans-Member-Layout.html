@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <title>SolsticeClan Members</title>
+    <meta name="description" content="Sinister Haven: SolsticeClan character descriptions and images">
+    <meta name="author" content="Kristy Thompson, Jessica Teichman">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta charset="UTF-8">
+    <link href="solsticeClanMembers.css" rel="stylesheet">
+    <script src="solsticeClanMembers.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=News+Cycle&family=Splash&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100&display=swap" rel="stylesheet">
+  </head>
+  <div class="background">
+    <header>
+      <h1> SolsticeClan </h1>
+      <div class="vector-img"></div>
+    </header>
+    <div class="character-submission-section">
+      <nav>
+        <button rel="noopener" onclick="openInNewTab('http://sinisterhaven.com/index.php?act=Pages&pid=17');"> Information</button>
+        <button rel="noopener" onclick="openInNewTab('http://sinisterhaven.com/index.php?act=Pages&pid=16');"> Members </button>
+        <button rel="noopener" onclick="openInNewTab('http://sinisterhaven.com/index.php?act=Pages&pid=4');"> Character Creation</button>
+        <button rel="noopener" onclick="openInNewTab('http://sinisterhaven.com/index.php?act=Pages&pid=18');"> Territory </button>
+        <button rel="noopener" onclick="openInNewTab('http://sinisterhaven.com/index.php?showforum=12');"> Forum</button>
+      </nav>
+      <div class="submission-flexbox">
+        <section class="character-submission-container">
+          <h2> Character Submissions </h2>
+          <div class="form-container">
+            <form name="SolsticeClanJoining">
+              <div class="form-container-inner">
+                <fieldset>
+                  <label for="CharacterName">Character Name
+                    <input type="text" name="Character Name" id="CharacterName" required>
+                  </label>
+                  <label for="RoleplayerUsername">Username
+                    <input type="text" name="Roleplayer Username" id="RoleplayerUsername" required>
+                  </label>
+                  <br>
+                  <label for="PhysicalDescription" style="grid-column: span 2;"> Physical Description <br>
+                    <textarea name="Physical Description (one sentence long)" id="PhysicalDescription" placeholder="one sentence minimum" required>
+                           </textarea>
+                  </label>
+                  <label for="Traits">Personality Traits
+                    <input type="text" name="Traits (List 3 in this format: One -- Two -- Three)" id="Traits" placeholder="One -- Two -- Three" required>
+                  </label>
+                  <label for="CharacterImage">Character Image (url)
+                    <input type="url" name="Character Image" id="CharacterImage" required>
+                  </label>
+                </fieldset>
+                <fieldset>
+                  <label for="Rank">
+                    Rank <br>
+                    <select name="Rank" id="Rank">
+                      <optgroup>
+                        <option value="Sun Warrior" selected> Sun Warrior </option>
+                        <option value="Moon Warrior"> Moon Warrior </option>
+                        <option value="Apprentice"> Apprentice </option>
+                        <option value="Elder"> Elder </option>
+                      </optgroup>
+                    </select>
+                  </label>
+                  <label for="Zodiac">
+                    Zodiac Sign <br>
+                    <select name="Zodiac Sign" id="Zodiac">
+                      <optgroup>
+                        <option value="♈ Aries (Ram): March 21–April 19" selected>♈ Aries (Ram): March 21–April 19</option>
+                        <option value="♉ Taurus (Bull): April 20–May 20">♉ Taurus (Bull): April 20–May 20</option>
+                        <option value="♊ Gemini (Twins): May 21–June 21">♊ Gemini (Twins): May 21–June 21</option>
+                        <option value="♋ Cancer (Crab): June 22–July 22">♋ Cancer (Crab): June 22–July 22</option>
+                        <option value="♌ Leo (Lion): July 23–August 22">♌ Leo (Lion): July 23–August 22</option>
+                        <option value="♍ Virgo (Virgin): August 23–September 22">♍ Virgo (Virgin): August 23–September 22</option>
+                        <option value="♎ Libra (Balance): September 23–October 23">♎ Libra (Balance): September 23–October 23</option>
+                        <option value="♏ Scorpius (Scorpion): October 24–November 21">♏ Scorpius (Scorpion): October 24–November 21</option>
+                        <option value="♐ Sagittarius (Archer): November 22–December 21">♐ Sagittarius (Archer): November 22–December 21</option>
+                        <option value="♑ Capricornus (Goat): December 22–January 19">♑ Capricornus (Goat): December 22–January 19</option>
+                        <option value="♒ Aquarius (Water Bearer): January 20–February 18">♒ Aquarius (Water Bearer): January 20–February 18</option>
+                        <option value="♓ Pisces (Fish): February 19–March 20">♓ Pisces (Fish): February 19–March 20</option>
+                      </optgroup>
+                    </select>
+                  </label>
+                  <select name="Status" style="display:none;">
+                    <option value="Pending" selected> Pending </option>
+                  </select>
+                  <label for="parentOne">
+                    Mother's Blood Type <br>
+                    <select id="parentOne" name="parentOne">
+                      <optgroup>
+                        <option value="Unknown" selected>Unknown</option>
+                        <option value="Diamond">Diamond</option>
+                        <option value="Emerald">Emerald</option>
+                        <option value="Amethyst">Amethyst</option>
+                        <option value="Amber">Amber</option>
+                      </optgroup>
+                    </select>
+                  </label>
+                  <label for="parentTwo">
+                    Father's Blood Type <br>
+                    <select id="parentTwo" name="parentTwo">
+                      <optgroup>
+                        <option value="Unknown" selected>Unknown</option>
+                        <option value="Diamond">Diamond</option>
+                        <option value="Emerald">Emerald</option>
+                        <option value="Amethyst">Amethyst</option>
+                        <option value="Amber">Amber</option>
+                      </optgroup>
+                    </select>
+                  </label>
+                  <label style="display:none;"> BLOOD
+                    <input type="text" name="blood1type" id="blood1type" required readonly>
+                  </label>
+                  <label for="Powers">
+                    Powers <br>
+                    <select name="Powers" id="Powers">
+                      <optgroup>
+                        <option value="None" selected>None</option>
+                        <option value="Power1">Power1</option>
+                        <option value="Power2">Power2</option>
+                        <option value="Power3">Power3</option>
+                        <option value="Power4">Power4</option>
+                        <option value="Power5">Power5</option>
+                      </optgroup>
+                    </select>
+                  </label>
+                  <label style="display:none;">
+                    Hybrid
+                    <select name="Hybrid">
+                      <optgroup>
+                        <option value="Domestic Cat" selected>Domestic Cat</option>
+                      </optgroup>
+                    </select>
+                  </label>
+                  <label for="Malady">
+                    Malady <br>
+                    <select name="Malady" id="Malady">
+                      <optgroup>
+                        <option value="None" selected>None</option>
+                        <option value="Malady1">Malady1</option>
+                        <option value="Malady2">Malady2</option>
+                        <option value="Malady3">Malady3</option>
+                        <option value="Malady4">Malady4</option>
+                        <option value="Malady5">Malady5</option>
+                      </optgroup>
+                    </select>
+                  </label>
+                </fieldset>
+                <div class="button-section">
+                  <img alt="butterfly" style="margin-left:15%;margin-bottom:-2rem;position:absolute; z-index:2;" src="https://www.animatedimages.org/data/media/291/animated-butterfly-image-0115.gif"><input type="submit" name="Sign Up">
+                </div>
+              </div>
+            </form>
+          </div>
+          <br>
+        </section>
+        <br>
+        <aside class="character-submission-info">
+          <h3>Keep in mind...</h3>
+          <p>Common Fur Colors:<i> put common fur colors here</i></p>
+          <p>Common Eye Colors:<i> put common eye colors here</i></p>
+          <p>Common Powers: <i>put common powers here</i></p>
+          <p>SolsticeClan Positive Traits: <br>
+            <i>Devout >> Spiritual >> Studious</i>
+          </p>
+          <p>SolsticeClan Neutral Traits: <br>
+            <i>Prideful >> Artistic >> Charismatic</i>
+          </p>
+          <p>SolsticeClan Negative Traits: <br>
+            <i>Argumenative >> Arrogant >> Manipulative</i>
+          </p>
+        </aside>
+      </div>
+    </div>
+    <div class="divider-img"></div>
+    <div class="character-section">
+      <br>
+      <div class="character-views">
+        <button class="viewlinks" onclick="openView(event, 'gallery')" id="defaultopen"> Gallery </button>
+        <button class="viewlinks" onclick="openView(event, 'allegiances')"> Allegiances </button>
+        <button class="viewlinks" onclick="openView(event, 'archive')"> Archive </button>
+        <button class="viewlinks" onclick="openView(event, 'ranks')"> Ranks</button>
+        <button class="viewlinks" onclick="openView(event, 'sol-statistics')"> Statistics </button>
+      </div>
+      <div class="character-section-containter">
+        <div class="character-container">
+          <h3 id="current-character-name">Name</h3>
+          Roleplayed by <span id="current-character-username"> Username </span><br>
+          <div id="current-character"></div>
+          <br>
+          <span id="current-character-traits">Trait 1 --- Trait 2 --- Trait 3 ---</span>
+          <p class="current-character-bio" id="current-character-bio">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </p>
+          <div class="current-character-flexbox">
+            <span id="current-character-rank">Clan Rank</span>
+            <span id="current-character-bloodtype">Blood Type</span>
+            <span id="current-character-powers">Power</span>
+          </div>
+        </div>
+        <div class="character-list-all">
+          <input type="text" id="username1" class="username-search" placeholder="search characters by username"><button id="filter" onclick="submituser()">
+            <img class="sorting-img" alt="username search" src="https://media.discordapp.net/attachments/746552826070564865/1011719440787841094/unknown.png">
+          </button>
+          <div class="character-list-container">
+            <div id="gallery" class="viewcharacters">
+              <div class="gallery-image-grid" id="scgallery">
+                <div class="gallery-images"></div>
+                <div class="gallery-images"></div>
+                <div class="gallery-images"></div>
+                <div class="gallery-images"></div>
+                <div class="gallery-images"></div>
+                <div class="gallery-images"></div>
+              </div>
+            </div>
+            <div id="allegiances" class="viewcharacters">
+              <div id="currentchars">
+                <span class= "sol-title-small"> Priests</span> <br>
+                <div class="priest" id="priest">Priests are loading -- please be patient</div>
+                <span class= "sol-title-small"> Sun Warriors</span><br>
+                <div class="sun-warriors" id="scsuns">Sun warriors are loading -- please be patient </div>
+                <span class= "sol-title-small"> Moon Warriors</span><br>
+                <div class="moon-warriors" id="scmoons">Moon warriors are loading -- please be patient</div>
+                <span class= "sol-title-small"> Apprentices</span><br>
+                <div class="apprentices" id="solsticeclanapprentices">Apprentices are loading -- please be patient</div>
+                <span class= "sol-title-small"> Kits</span><br>
+                <div class="kits" id="sckits">Kits are loading -- please be patient </div>
+                <span class= "sol-title-small"> Elders</span><br>
+                <div class="elders" id="scelders">Elders are loading -- please be patient</div>
+              </div>
+            </div>
+            <div id="archive" class="viewcharacters">
+              <br><br>
+              <div id="archiveexplanation">This is SolsticeClan's archive. The archive is where we store characters that have been deleted or passed away.
+                To view your archived characters simply click show Archive below and your characters will appear if you have
+                any. Otherwise, this section will appear blank. If you would like to have your character re-added to the clan, you
+                can do so by clicking the Re-add cat button under their description.
+                <button id="solarchivebutton" onclick="toggleArchive()">Show Archive</button><br><br>
+              </div>
+              <div id="archivechars">
+              </div>
+            </div>
+            <div id="ranks" class="viewcharacters">
+              <span class= "sol-title-small"> Priests</span> <br>
+              <div id="priest-explain">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation
+              </div>
+              <br><br>
+              <span class= "sol-title-small"> Sun Warriors</span> <br>
+              <div id="sun-warriors-explain"><br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation
+                </p>
+              </div>
+            </div>
+            <br><br>
+            <span class= "sol-title-small"> Moon Warriors</span> <br>
+            <div id="moon-warriors-explain">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation
+              anger.
+            </div>
+            <br><br>
+            <span class= "sol-title-small"> Apprentices</span> <br>
+            <div id="sol-apprentices-explain">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation
+            </div>
+            <br><br>
+            <span class= "sol-title-small"> Kits</span> <br>
+            <div id="sol-kits-explain">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation
+            </div>
+            <br><br>
+            <span class= "sol-title-small">Elders</span> <br>
+            <div id="sol-elders-explain">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation
+            </div>
+            <br><br>
+            <div id="sol-statistics" class="viewcharacters">
+              <iframe width="90%" height="360" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vREzwVYgNn9fMWkbWZkBjfR7wyq8cJZHhNJZNsZwl7q9I74dd2wcnHI1L7pp0cZ3efWyI288pxI938P/pubchart?oid=231825293&amp;format=interactive">
+              </iframe>
+            </div>
+          </div>
+          <div class="character-sorting">
+            <button id="sort" onclick="allsort()">
+              <img class="sorting-img" alt="alphabetical sorting" src="https://i.imgur.com/WGjLUQM.png">
+            </button>
+            <button id="revsort" onclick="allrevsort()">
+              <img class="sorting-img" alt="reverse alphabetical sorting" src="https://i.imgur.com/RscDBaG.png">
+            </button>
+            <button id="zodiacsort" onclick="sortallZodiac()">
+              <img class="sorting-img" alt="sory by zodiac" src="https://i.imgur.com/2qNcJRm.png">
+            </button>
+            <button id="resetfilter" class="sorting-img" onclick="resetCats()">
+              <img class="sorting-img" alt="reset filters" src="https://images-ext-1.discordapp.net/external/BuaWIF-XdD9HK3lJ1c1Tif87039a2D4sacNIGtkXYYM/https/cdn-icons-png.flaticon.com/512/32/32418.png">
+            </button>
+          </div>
+        </div>
+        <br><br>
+      </div><br><br>
+    </div>
+    <footer>
+      <details>
+        <summary>
+          Layout Credits
+        </summary>
+        Layout design (c) Kristy Thompson<br>
+        Layout coded by (c) Kristy Thompson & Jessica Teichman <br>
+        Vector images (c) Kristy Thompson <br>
+        Page Content (c) Sinister Haven <br>
+        Character descriptions (c) Sinister Haven Roleplayers<br>
+        Character images (c) original owners(ask rper for image credits)<br>
+        Default images (c) unsplash.com
+      </details>
+    </footer>
+  </div>
+
+</html>
