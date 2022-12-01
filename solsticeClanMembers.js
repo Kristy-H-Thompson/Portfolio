@@ -420,7 +420,7 @@ function flagStatus() {
 }
 
 //Joining Form- Submit a Character
-const form = document.forms["SolsticeClanJoining"];
+const form = document.forms["Example Joining Form"];
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const bt = callme();
