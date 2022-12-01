@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
     },
     dataType: 'text'
   });
-}
+});
 
 
 
