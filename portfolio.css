@@ -15,13 +15,6 @@ h1 {
     margin:0px;
 }
 
-.side_bar_gradient span {
-    font-family: 'Forum', cursive;
-    font-size:140%;
-    font-weight: bold;
-    margin:0px;
-}
-
 h2{
     font-family: 'Forum', cursive;
     font-size:250%;
@@ -72,10 +65,17 @@ nav li a:hover{
     background-size:cover;
     filter: hue-rotate(50deg);
     grid-column: span 1;
-    height:100vh;
+    height:90vh;
     min-width:300px;
     padding:0px;
     width:100%;
+}
+
+.side_bar_gradient span {
+    font-family: 'Forum', cursive;
+    font-size:140%;
+    font-weight: bold;
+    margin:0px;
 }
 
 .side_bar_gradient {
