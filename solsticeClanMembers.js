@@ -92,7 +92,7 @@ function catfilter(cha, r = "", user = "", zodiac = "", status = "") {
       l +=
         "<button onclick=\"displaycatonclick('" +
         tempchars[i].charactername +
-        "')\"  + "class='character-name-button' >" +
+        "'\)"  + "class='character-name-button' >" +
         tempchars[i].name +
         "</button>" +
         " rp'd by " +
@@ -111,7 +111,7 @@ function catfilter(cha, r = "", user = "", zodiac = "", status = "") {
       l +=
         "<button onclick=\"displaycatonclick('" +
         tempchars[i].charactername +
-        "')\" + "class='character-name-button' >" +
+        "'\)" + "class='character-name-button' >" +
         tempchars[i].name +
         "</button>" +
         " rp'd by " +
