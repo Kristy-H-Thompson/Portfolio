@@ -521,12 +521,10 @@ function resetCats() {
 var yourcats = [];
 
 function showArchive() {
-  const you = document.getElementById("upperusername").innerText;
   document.getElementById("archiveexplanation").style.display = "none";
 
   for (i = 0; i < archive_chars.length; i++) {
-    if (archive_chars[i].rper.toUpperCase() == you.toUpperCase()) {
-      yourcats.push(archive_chars[i]);
+ if (archive_chars[i].rper.toUpperCase()) { // normally this would check against the site username to see if this character belongs to the viewer, but we're bypassing this check for the purposes of this demo!      yourcats.push(archive_chars[i]);
     }
   }
   for (i = 0; i < yourcats.length; i++) {
