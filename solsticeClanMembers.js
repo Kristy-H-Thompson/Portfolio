@@ -90,7 +90,7 @@ function catfilter(cha, r = "", user = "", zodiac = "", status = "") {
       (tempchars[i].status != "Archived")
     ) {
       l +=
-        onclick=\"displaycatonclick('" +
+        "<button onclick=\"displaycatonclick('" +
         tempchars[i].charactername +
         "')\"  + 'class="character-name-button" >' +
         tempchars[i].name +
@@ -109,7 +109,7 @@ function catfilter(cha, r = "", user = "", zodiac = "", status = "") {
       cha.push(tempchars[i]);
     } else if (status == "Archived" && tempchars[i].status == "Archived") {
       l +=
-        onclick=\"displaycatonclick('" +
+        "<button onclick=\"displaycatonclick('" +
         tempchars[i].charactername +
         "')\" + 'class="character-name-button" >' +
         tempchars[i].name +
