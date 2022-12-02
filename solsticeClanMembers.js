@@ -92,7 +92,7 @@ function catfilter(cha, r = "", user = "", zodiac = "", status = "") {
       l +=
         onclick=\"displaycatonclick('" +
         tempchars[i].charactername +
-        "')\" + class='character-name-button' >" +
+        "')\" + "class='character-name-button' >" +
         tempchars[i].name +
         "</button>" +
         " rp'd by " +
