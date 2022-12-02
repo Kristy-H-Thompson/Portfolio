@@ -156,7 +156,7 @@ main{
 
 .project_explanation {
     grid-column: span 2;
-    max-height:20%;
+    max-height:40%;
     margin-top:-20px;
     overflow:auto;
     padding:1rem;
