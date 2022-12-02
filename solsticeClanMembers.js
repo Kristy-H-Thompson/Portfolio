@@ -90,8 +90,10 @@ function catfilter(cha, r = "", user = "", zodiac = "", status = "") {
       (tempchars[i].status != "Archived")
     ) {
       l +=
-        "<button onclick=\"displaycatonclick('" +
+        onclick=\"displaycatonclick('" +
         tempchars[i].charactername +
+        "')\" 
+          
         "') class='character-name-button' >" +
         tempchars[i].name +
         "</button>" +
