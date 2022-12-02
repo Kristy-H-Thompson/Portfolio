@@ -174,7 +174,7 @@ main{
     display:grid;
     gap:2rem;
     grid-column: span 2;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
     justify-content: center;
     margin:1rem;
     width:90%;
