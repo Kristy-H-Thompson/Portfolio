@@ -286,7 +286,8 @@ main{
     grid-template-columns: auto auto auto auto auto auto auto auto auto;
     justify-content: space-around;
     max-height:10vh;
-    margin:3rem;
+    margin-bottom:3rem;
+    margin-top:1rem;
     width:90%;
  }
 
