@@ -285,7 +285,7 @@ main{
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto;
     justify-content: space-around;
-    height:15vh;
+    max-height:10vh;
     margin-top:1rem;
     width:90%;
  }
