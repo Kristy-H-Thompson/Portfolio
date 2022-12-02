@@ -208,8 +208,8 @@ main{
     border: 1px solid var(--black);
     color:var(--white);
     font-family: 'Forum', cursive;
-    font-size:100%;
-    padding:.5rem;
+    font-size:90%;
+    padding:.4rem;
 }
 
 .project_buttons button:hover{
