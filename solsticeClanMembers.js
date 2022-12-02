@@ -504,6 +504,18 @@ function resetCats() {
   loadAGallery(gallery_location, chars);
 }
 
+  $.ajax({
+    crossOrigin: true,
+    url: scriptURL,
+    success: function(data) {
+      getText(data);
+      console.log('AJAX request completed successfully onload and information has been fetched from HG Database.')
+
+    },
+    dataType: 'text'
+  });
+});
+
 
 //Character Archive
 var yourcats = [];
@@ -713,17 +725,6 @@ function displaycatonclick(solscharactername) {
 function openInNewTab(url) {
   window.open(url, "_blank").focus();
 }
-  $.ajax({
-    crossOrigin: true,
-    url: scriptURL,
-    success: function(data) {
-      getText(data);
-      console.log('AJAX request completed successfully onload and information has been fetched from HG Database.')
-
-    },
-    dataType: 'text'
-  });
-});
 
 
 
