@@ -1,58 +1,13 @@
 
-//Script link and setting up the character array
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzsNEjjseObXABaBT4-6O8BTtUkMse-4KPY2XqCL4vpk8FaYBgMle5t4o3q4bRynybB/exec';
-var chars = [];
 
 
 //AJAX - helps to load characters faster
-$( document ).ready(function()  {      
-//Joining Form- Submit a Character
-form = document.forms["SolsticeClanJoining"];
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const bt = callme();
-  document.getElementById("blood1type").value = bt;
-  fetch(scriptURL, {
-    method: "POST",
-    body: new FormData(form),
-    mode: "no-cors"
-  })
-    .then((response) =>
-      alert(
-        "Character submitted! \n \n Your character's blood type is " +
-          bt +
-          " ^^",
-        response
-      )
-    )
-    .catch((error) => alert("Error!", error.message));
-});
-      //Setting up locations for all of the character ranks
-    const priest_location = document.getElementById("priest");
-    const sun_location = document.getElementById("scsuns");
-    const moon_location = document.getElementById("scmoons");
-    const apps_location = document.getElementById("solsticeclanapprentices");
-    const kits_location = document.getElementById("sckits");
-    const elder_location = document.getElementById("scelders");
-    const gallery_location = document.getElementById("scgallery");
-    const thisclanname = "SolsticeClan";
-  $.ajax({
-    crossOrigin: true,
-    url: scriptURL,
-    success: function(data) {
-      getText(data);
-      console.log('AJAX request completed successfully onload and information has been fetched from HG Database.')
-
-    },
-    dataType: 'text'
-  });
-});
-
-
-
-
-
-// Create a Cat Object
+$( document ).ready(function()  {
+//Script link and setting up the character array
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzsNEjjseObXABaBT4-6O8BTtUkMse-4KPY2XqCL4vpk8FaYBgMle5t4o3q4bRynybB/exec';
+var chars = [];
+      
+ // Create a Cat Object
 function Cat(timestamp, name, rper, physical, traits, characterimage, rank, zodiac, status, parent1, parent2, bloodtype, power, hybrid, malady) {
     this.timestamp = timestamp,
     this.name = name,
@@ -727,3 +682,51 @@ function displaycatonclick(solscharactername) {
 function openInNewTab(url) {
   window.open(url, "_blank").focus();
 }
+ 
+  
+//Joining Form- Submit a Character
+form = document.forms["SolsticeClanJoining"];
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const bt = callme();
+  document.getElementById("blood1type").value = bt;
+  fetch(scriptURL, {
+    method: "POST",
+    body: new FormData(form),
+    mode: "no-cors"
+  })
+    .then((response) =>
+      alert(
+        "Character submitted! \n \n Your character's blood type is " +
+          bt +
+          " ^^",
+        response
+      )
+    )
+    .catch((error) => alert("Error!", error.message));
+});
+      //Setting up locations for all of the character ranks
+    const priest_location = document.getElementById("priest");
+    const sun_location = document.getElementById("scsuns");
+    const moon_location = document.getElementById("scmoons");
+    const apps_location = document.getElementById("solsticeclanapprentices");
+    const kits_location = document.getElementById("sckits");
+    const elder_location = document.getElementById("scelders");
+    const gallery_location = document.getElementById("scgallery");
+    const thisclanname = "SolsticeClan";
+  $.ajax({
+    crossOrigin: true,
+    url: scriptURL,
+    success: function(data) {
+      getText(data);
+      console.log('AJAX request completed successfully onload and information has been fetched from HG Database.')
+
+    },
+    dataType: 'text'
+  });
+});
+
+
+
+
+
