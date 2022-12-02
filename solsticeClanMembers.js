@@ -5,7 +5,7 @@ var chars = [];
 
 
 //AJAX - helps to load characters faster
-document.ready {      
+$( document ).ready(function()  {      
     const form = document.forms["SolsticeClanJoining"];
       //Setting up locations for all of the character ranks
     const priest_location = document.getElementById("priest");
