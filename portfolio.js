@@ -1,7 +1,7 @@
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbxybF6zxIac4H95WTMQ2TGQhRL1sg7dsTbQzOxuqiRRfeJAekFGqFEG2RUvvo_eyCFQ/exec";
 
-const form = document.forms["contact"];
+const form = document.forms["contactme"];
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
