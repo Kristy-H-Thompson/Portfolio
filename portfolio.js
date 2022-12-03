@@ -15,5 +15,5 @@ const handleSubmit = (event) => {
 };
 
 document
-  .querySelector("contact")
+  .querySelector("form")
   .addEventListener("submit", handleSubmit);
