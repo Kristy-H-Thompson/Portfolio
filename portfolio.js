@@ -1,5 +1,5 @@
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbz7ltm6HIUqw_VDom5C3NuLxLBOxuExpp5cJ5hSAGURR5We3AGN6Sv_NP0biDyshqdU/exec";
+  "https://script.google.com/macros/s/AKfycbwHEGo2S1OjeOJMN3GVsGSNVxr4vDuURZcUluCmHupdZYkovczG-XwT6_kM0tYaBaqx/exec";
 
 const form = document.forms["oFormObject"];
 
