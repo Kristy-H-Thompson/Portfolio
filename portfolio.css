@@ -308,14 +308,10 @@ main{
     display:inline;
     grid-column: span 1;
     height:100vh;
-    padding:5rem;
+    padding:2rem;
     overflow:auto;
-    width:100%;
+    width:95%;
  }
-
-.starstar_project_info {
-    padding:5rem;
-}
 
 .starstar_image {
     display:inline;
