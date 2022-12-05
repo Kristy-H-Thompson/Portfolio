@@ -313,6 +313,15 @@ main{
     width:95%;
  }
 
+.starstar_project {
+    display:inline;
+    grid-column: span 1;
+    height:100vh;
+    padding:2rem;
+    overflow:auto;
+    width:95%;
+}
+
 .starstar_image {
     display:inline;
     float:left;
