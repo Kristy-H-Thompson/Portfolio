@@ -312,3 +312,9 @@ main{
     overflow:auto;
     width:100%;
  }
+
+.starstar_image {
+    display:inline;
+    float:left;
+    width:10rem;
+}
