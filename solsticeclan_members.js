@@ -677,6 +677,9 @@ function openView(evt, viewName) {
   }
 }
 
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
 
 //Display more  character information on click
 function displaycatonclick(solscharactername) {
