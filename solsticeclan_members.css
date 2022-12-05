@@ -3,12 +3,14 @@ body {
     width:100vw;
     height:100vh;
     margin:0px;
-    overflow:hidden;
+    overflow:auto;
+    padding:0px;
 }
 
 .background {
     background-color: #D97A5B;
     color: black;
+    height:100%;
     width: 100%;
   }
 
