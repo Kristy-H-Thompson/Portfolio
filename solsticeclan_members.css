@@ -42,7 +42,8 @@ body {
     text-align: center;
   }
 
-  h2:hover {
+  h2:hover {    margin: 5px;
+
   .background {
     background-color: #D97A5B;
     color: black;
