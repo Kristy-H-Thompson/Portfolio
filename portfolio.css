@@ -93,7 +93,7 @@ main{
     display:inline;
     grid-column: span 1;
     height:100vh;
-    padding:1rem;
+    padding:2rem;
     overflow:auto;
     width:100%;
 }
