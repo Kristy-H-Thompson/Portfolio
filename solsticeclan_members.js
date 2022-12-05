@@ -1,21 +1,31 @@
-
-
-
-//AJAX - helps to load characters faster
-$( document ).ready(function()  {
 //Script link and setting up the character array
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzsNEjjseObXABaBT4-6O8BTtUkMse-4KPY2XqCL4vpk8FaYBgMle5t4o3q4bRynybB/exec';
 var chars = [];
-      
-//Setting up locations for all of the character ranks
-const priest_location = document.getElementById("priest");
-const sun_location = document.getElementById("scsuns");
-const moon_location = document.getElementById("scmoons");
-const apps_location = document.getElementById("solsticeclanapprentices");
-const kits_location = document.getElementById("sckits");
-const elder_location = document.getElementById("scelders");
-const gallery_location = document.getElementById("scgallery");
-const thisclanname = "SolsticeClan";
+
+//AJAX - helps to load characters faster
+window.addEventListener('DOMContentLoaded', (e) => {      
+     form = document.forms["SolsticeClanJoining"];
+      //Setting up locations for all of the character ranks
+    const priest_location = document.getElementById("priest");
+    const sun_location = document.getElementById("scsuns");
+    const moon_location = document.getElementById("scmoons");
+    const apps_location = document.getElementById("solsticeclanapprentices");
+    const kits_location = document.getElementById("sckits");
+    const elder_location = document.getElementById("scelders");
+    const gallery_location = document.getElementById("scgallery");
+    const thisclanname = "SolsticeClan";
+  $.ajax({
+    crossOrigin: true,
+    url: scriptURL,
+    success: function(data) {
+      getText(data);
+      console.log('AJAX request completed successfully onload and information has been fetched from HG Database.')
+
+    },
+    dataType: 'text'
+  });
+
+
 
 
 // Create a Cat Object
@@ -55,7 +65,6 @@ function getText(cats) {
   cats = cats.split(',');
   for (i = 15; i < cats.length; i += 15) {
   chars.push(new Cat(cats[i], cats[i + 1], cats[i + 2], cats[i + 3], cats[i + 4], cats[i + 5], cats[i + 6], cats[i + 7], cats[i + 8], cats[i + 9], cats[i + 10], cats[i + 11], cats[i + 12], cats[i + 13], cats[i + 14]));
- console.log(chars)
   }
     priest_chars = catfilterarray(chars, 'Priest');
     app_chars = catfilterarray(chars, 'Apprentice');
@@ -91,7 +100,9 @@ function catfilter(cha, r = "", user = "", zodiac = "", status = "") {
       (tempchars[i].status != "Archived")
     ) {
       l +=
-        "<button onclick=\"displaycatonclick('" + tempchars[i].name + "')\" class='character-name-button' >" +
+        "<button onclick=\"displaycatonclick('" +
+        tempchars[i].name +
+        "')\" class='character-name-button' >" +
         tempchars[i].name +
         "</button>" +
         " rp'd by " +
@@ -108,7 +119,9 @@ function catfilter(cha, r = "", user = "", zodiac = "", status = "") {
       cha.push(tempchars[i]);
     } else if (status == "Archived" && tempchars[i].status == "Archived") {
       l +=
-       "<button onclick=\"displaycatonclick('" + tempchars[i].name + "')\ class='character-name-button' >" +
+        "<button onclick=\"displaycatonclick('" +
+        tempchars[i].charactername +
+        "') class='character-name-button' >" +
         tempchars[i].name +
         "</button>" +
         " rp'd by " +
@@ -405,8 +418,9 @@ function flagStatus() {
   }
 }
 
+
 //Joining Form- Submit a Character
-const form = document.forms["SolsticeClanJoining"];
+form = document.forms["SolsticeClanJoining"];
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const bt = callme();
@@ -501,19 +515,16 @@ function resetCats() {
   loadAGallery(gallery_location, chars);
 }
 
-  $.ajax({
-    crossOrigin: true,
-    url: scriptURL,
-    success: function(data) {
-      getText(data);
-      console.log('AJAX request completed successfully onload and information has been fetched from HG Database.')
-
-    },
-    dataType: 'text'
-  });
-});
+/************ JERE DDOWN
 
 
+
+
+
+**********/
+
+  
+});  
 //Character Archive
 var yourcats = [];
 
@@ -521,7 +532,8 @@ function showArchive() {
   document.getElementById("archiveexplanation").style.display = "none";
 
   for (i = 0; i < archive_chars.length; i++) {
- if (archive_chars[i].rper.toUpperCase()) { // normally this would check against the site username to see if this character belongs to the viewer, but we're bypassing this check for the purposes of this demo!      yourcats.push(archive_chars[i]);
+    if (archive_chars[i].rper) { // on the production page, this if would check if the archived characters belong to the viewing user, but for this demo you can see all archived characters
+      yourcats.push(archive_chars[i]);
     }
   }
   for (i = 0; i < yourcats.length; i++) {
@@ -719,9 +731,4 @@ function displaycatonclick(solscharactername) {
 
 function openInNewTab(url) {
   window.open(url, "_blank").focus();
-}
-
-
-
-
-
+}    
