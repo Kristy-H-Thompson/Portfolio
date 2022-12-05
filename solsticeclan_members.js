@@ -652,6 +652,10 @@ function callme() {
 }
 
 
+// Get the element with id="gallery" and click on it
+document.getElementById("defaultopen").click();
+
+
 //Page Tabs
 function openView(evt, viewName) {
   var i, tabcontent, viewlinks;
@@ -676,10 +680,6 @@ function openView(evt, viewName) {
     document.getElementById("username1").style.display = "block";
   }
 }
-
-
-// Get the element with id="gallery" and click on it
-document.getElementById("defaultopen").click();
 
 
 //Display more  character information on click
