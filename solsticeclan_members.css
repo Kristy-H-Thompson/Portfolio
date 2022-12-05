@@ -610,7 +610,7 @@
   }
 
   .viewcharacters {
-    display:none;
+    display:none !important;
     width: 100%;
   }
 
