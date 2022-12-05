@@ -1,3 +1,9 @@
+.body {
+    box-sizing: border-box;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+}
 
 .background {
     background-color: #D97A5B;
