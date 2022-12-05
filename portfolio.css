@@ -322,3 +322,7 @@ main{
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
+
+.startstar_info_box{
+    margin:3rem auto;
+}
