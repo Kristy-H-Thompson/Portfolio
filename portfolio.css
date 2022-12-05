@@ -313,6 +313,10 @@ main{
     width:100%;
  }
 
+.starstar_project_info {
+    padding:2rem;
+}
+
 .starstar_image {
     display:inline;
     float:left;
