@@ -316,5 +316,6 @@ main{
 .starstar_image {
     display:inline;
     float:left;
+    margin-bottom:2rem;
     width:10rem;
 }
