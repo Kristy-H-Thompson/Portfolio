@@ -652,10 +652,6 @@ function callme() {
 }
 
 
-// Get the element with id="gallery" and click on it
-document.getElementById("defaultopen").click();
-
-
 //Page Tabs
 function openView(evt, viewName) {
   var i, tabcontent, viewlinks;
