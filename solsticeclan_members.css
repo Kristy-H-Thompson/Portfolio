@@ -94,11 +94,10 @@ body {
   }
 
   nav button {
-    background-color: #d97a5b;
-    background-size: cover;
-    border: none;
+    background-color: transparent;
+    border: 3 px solid #d97a5b;
     border-radius:10%;
-    color: rgba(255, 216, 189, 1);
+    color: #d97a5b;
     display: inline;
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-size: 150%;
