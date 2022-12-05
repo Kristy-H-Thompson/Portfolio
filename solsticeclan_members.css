@@ -11,7 +11,7 @@ body {
 .background {
     background-color: #D97A5B;
     color: black;
-    width: 100%;
+    width: 99vw;
   }
 
   .dark .background {
