@@ -400,7 +400,7 @@
     background-color: #d97a5b;
     background-size: cover;
     border: none;
-    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    border-radis:10%;
     color: rgba(255, 216, 189, 1);
     display: inline;
     font-family: 'Barlow Semi Condensed', sans-serif;
