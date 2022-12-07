@@ -206,7 +206,9 @@ main{
     grid-column: span 2;
     grid-template-columns: auto auto auto;
     justify-content: center;
+    letter-spacing:1px;
     margin:1.5rem;
+    text-transform: capitalize;
 }
 
 .project_button{
