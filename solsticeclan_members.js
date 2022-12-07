@@ -874,4 +874,3 @@ function resetCats() {
         cats[i + 14]
       )
     );
-  }
