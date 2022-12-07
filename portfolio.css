@@ -353,6 +353,10 @@ main{
     transform: scaleX(-1);
 }
 
+#solsticeclan_project_info{
+    margin-bottom:5rem;
+}
+
 .startstar_info_box{
     margin:5rem auto;
 }
