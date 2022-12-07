@@ -226,72 +226,6 @@ function catgallery(cha, user = "", zodiac = "", status = "") {
 }
 
 
-// Alphabetizing characters on the page from a->z and z->a
-function alphabet(loc, chars, rank = "", viewName = "") {
-  chars.sort(function (x, y) {
-    let a = x.name.toUpperCase();
-    b = y.name.toUpperCase();
-    return a == b ? 0 : a > b ? 1 : -1;
-  });
-
-  chars.sort(function (x, y) {
-    return x.name - y.name;
-  });
-
-  if (viewName == "allegiances") {
-    loc.innerHTML = catfilter(chars, rank);
-  } else if (viewName == "gallery") {
-    loc.innerHTML = catgallery(chars, rank);
-  } else {
-    console.log("help");
-  }
-}
-
-function sortRev(loc, chars, rank = "", viewName = "") {
-  chars.sort(function (x, y) {
-    let a = x.name.toUpperCase();
-    b = y.name.toUpperCase();
-    return a == b ? 0 : a > b ? 1 : -1;
-  });
-
-  chars.sort(function (x, y) {
-    return x.name - y.name;
-  });
-
-  if (viewName == "allegiances") {
-    chars.reverse();
-    loc.innerHTML = catfilter(chars, rank);
-  } else if (viewName == "gallery") {
-    chars.reverse();
-    loc.innerHTML = catgallery(chars, rank);
-  } else {
-    console.log("help");
-  }
-}
-
-
-// function for the alphabetizing characters on click
-function allsort() {
-  alphabet(priest_location, priest_chars, "Priest", "allegiances");
-  alphabet(apps_location, app_chars, "Apprentice", "allegiances");
-  alphabet(sun_location, sun_chars, "Sun Warrior", "allegiances");
-  alphabet(moon_location, moon_chars, "Moon Warrior", "allegiances");
-  alphabet(kits_location, kit_chars, "Kit", "allegiances");
-  alphabet(elder_location, elder_chars, "Elder", "allegiances");
-  alphabet(gallery_location, chars, "", "gallery");
-}
-
-function allrevsort() {
-  sortRev(priest_location, priest_chars, "Priest", "allegiances");
-  sortRev(apps_location, app_chars, "Apprentice", "allegiances");
-  sortRev(sun_location, sun_chars, "Sun Warrior", "allegiances");
-  sortRev(moon_location, moon_chars, "Moon Warrior", "allegiances");
-  sortRev(kits_location, kit_chars, "Kit", "allegiances");
-  sortRev(elder_location, elder_chars, "Elder", "allegiances");
-  sortRev(gallery_location, chars, "", "gallery");
-}
-
-
 //Counting # of chars
 function countCats() {
   $("priestcount").text(priest_chars.length);
@@ -513,15 +447,7 @@ function resetCats() {
 
   loadAGallery(gallery_location, chars);
 }
-
-/************ JERE DDOWN
-
-
-
-
-
-**********/
-
+	
   
 });  
 //Character Archive
@@ -561,6 +487,7 @@ function showArchive() {
   document.getElementById("archivechars").style.display = "block";
   document.getElementById("archivechars").style.margin = "0px 0px 0px 0px";
 }
+
 
 function hideArchive() {
   document.getElementById("archivechars").style.display = "none";
@@ -727,3 +654,76 @@ function displaycatonclick(solscharactername) {
 function openInNewTab(url) {
   window.open(url, "_blank").focus();
 }    
+
+
+
+
+
+
+
+// function for the alphabetizing characters on click
+function allsort() {
+  alphabet(priest_location, priest_chars, "Priest", "allegiances");
+  alphabet(apps_location, app_chars, "Apprentice", "allegiances");
+  alphabet(sun_location, sun_chars, "Sun Warrior", "allegiances");
+  alphabet(moon_location, moon_chars, "Moon Warrior", "allegiances");
+  alphabet(kits_location, kit_chars, "Kit", "allegiances");
+  alphabet(elder_location, elder_chars, "Elder", "allegiances");
+  alphabet(gallery_location, chars, "", "gallery");
+}
+
+function allrevsort() {
+  sortRev(priest_location, priest_chars, "Priest", "allegiances");
+  sortRev(apps_location, app_chars, "Apprentice", "allegiances");
+  sortRev(sun_location, sun_chars, "Sun Warrior", "allegiances");
+  sortRev(moon_location, moon_chars, "Moon Warrior", "allegiances");
+  sortRev(kits_location, kit_chars, "Kit", "allegiances");
+  sortRev(elder_location, elder_chars, "Elder", "allegiances");
+  sortRev(gallery_location, chars, "", "gallery");
+}
+
+
+
+
+// Alphabetizing characters on the page from a->z and z->a
+function alphabet(loc, chars, rank = "", viewName = "") {
+  chars.sort(function (x, y) {
+    let a = x.name.toUpperCase();
+    b = y.name.toUpperCase();
+    return a == b ? 0 : a > b ? 1 : -1;
+  });
+
+  chars.sort(function (x, y) {
+    return x.name - y.name;
+  });
+
+  if (viewName == "allegiances") {
+    loc.innerHTML = catfilter(chars, rank);
+  } else if (viewName == "gallery") {
+    loc.innerHTML = catgallery(chars, rank);
+  } else {
+    console.log("help");
+  }
+}
+
+function sortRev(loc, chars, rank = "", viewName = "") {
+  chars.sort(function (x, y) {
+    let a = x.name.toUpperCase();
+    b = y.name.toUpperCase();
+    return a == b ? 0 : a > b ? 1 : -1;
+  });
+
+  chars.sort(function (x, y) {
+    return x.name - y.name;
+  });
+
+  if (viewName == "allegiances") {
+    chars.reverse();
+    loc.innerHTML = catfilter(chars, rank);
+  } else if (viewName == "gallery") {
+    chars.reverse();
+    loc.innerHTML = catgallery(chars, rank);
+  } else {
+    console.log("help");
+  }
+}
