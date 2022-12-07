@@ -2,6 +2,7 @@
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzsNEjjseObXABaBT4-6O8BTtUkMse-4KPY2XqCL4vpk8FaYBgMle5t4o3q4bRynybB/exec';
 var chars = [];
 
+
 //AJAX - helps to load characters faster
 window.addEventListener('DOMContentLoaded', (e) => {      
      form = document.forms["SolsticeClanJoining"];
@@ -24,10 +25,8 @@ window.addEventListener('DOMContentLoaded', (e) => {
     },
     dataType: 'text'
   });
-
-
-
-
+	
+	
 // Create a Cat Object
 function Cat(timestamp, name, rper, physical, traits, characterimage, rank, zodiac, status, parent1, parent2, bloodtype, power, hybrid, malady) {
     this.timestamp = timestamp,
@@ -675,9 +674,6 @@ if (viewName == "allegiances" || viewName == "gallery"){
 }
 
 }
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
 
 
 
