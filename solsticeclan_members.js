@@ -690,6 +690,59 @@ function allrevsort() {
 }
 
 
+//This function tells the page how to display the cat objects
+function catfilter(cha, r = "", user = "", zodiac = "", status = "") {
+  l = "";
+  tempchars = cha;
+  cha = [];
+  for (i = 0; i < tempchars.length; i++) {
+    if (
+      (tempchars[i].rper == user || user == "") &&
+      (tempchars[i].rank == r || r == "") &&
+      (tempchars[i].zodiac == zodiac || zodiac == "") &&
+      (tempchars[i].status != "Archived")
+    ) {
+      l +=
+        "<button onclick=\"displaycatonclick('" +
+        tempchars[i].name +
+        "')\" class='character-name-button' >" +
+        tempchars[i].name +
+        "</button>" +
+        " rp'd by " +
+        tempchars[i].rper +
+        " - " +
+        tempchars[i].bloodtype +
+        "<br>" +
+        tempchars[i].physical +
+        "<br>" +
+        tempchars[i].traits +
+        "<br>Zodiac: " +
+        tempchars[i].zodiac +
+        "<br><br>";
+      cha.push(tempchars[i]);
+    } else if (status == "Archived" && tempchars[i].status == "Archived") {
+      l +=
+        "<button onclick=\"displaycatonclick('" +
+        tempchars[i].charactername +
+        "') class='character-name-button' >" +
+        tempchars[i].name +
+        "</button>" +
+        " rp'd by " +
+        tempchars[i].rper +
+        " - " +
+        tempchars[i].bloodtype +
+        "<br>" +
+        tempchars[i].physical +
+        "<br>" +
+        tempchars[i].traits +
+        "<br>Zodiac: " +
+        tempchars[i].zodiac +
+        "<br><br>";
+      cha.push(tempchars[i]);
+    }
+  }
+  return l;
+}
 
 
 // Alphabetizing characters on the page from a->z and z->a
