@@ -124,13 +124,13 @@ main{
     border-radius:15%;
     grid-column: span 1;
     height:100%;
-    padding:.5rem;
+    padding:.3rem;
     text-align: center;
     width:100%;
 }
 
 .about_me_image img{
-    height:5rem;
+    height:4.5rem;
     margin:.5rem;
     width:5rem;
 }
