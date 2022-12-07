@@ -133,6 +133,10 @@ main{
     width:100%;
 }
 
+.about_me_image :hover {
+    background-color:var(--lightblue);
+}
+
 .about_me_image img{
     height:3rem;
     margin:.5rem;
