@@ -673,11 +673,11 @@ if (viewName == "allegiances" || viewName == "gallery"){
 	document.getElementById('filter').style.display = "block";
 	document.getElementById('username1').style.display = "block";
 }
-
-}
-
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+}
+
+
 
 
 
