@@ -875,24 +875,3 @@ function resetCats() {
       )
     );
   }
-
-  priest_chars = catfilterarray(chars, "Priest");
-  app_chars = catfilterarray(chars, "Apprentice");
-  sun_chars = catfilterarray(chars, "Sun Warrior");
-  moon_chars = catfilterarray(chars, "Moon Warrior");
-  kit_chars = catfilterarray(chars, "Kit");
-  elder_chars = catfilterarray(chars, "Elder");
-  archive_chars = catfilterarray(chars, "", "", "", (status = "Archived"));
-
-  loadARank(priest_location, "Priest", priest_chars);
-  loadARank(apps_location, "Apprentice", app_chars);
-  loadARank(sun_location, "Sun Warrior", sun_chars);
-  loadARank(moon_location, "Moon Warrior", moon_chars);
-  loadARank(kits_location, "Kit", kit_chars);
-  loadARank(elder_location, "Elder", elder_chars);
-
-  loadAGallery(gallery_location, chars);
-}
-	
-  
-});  
