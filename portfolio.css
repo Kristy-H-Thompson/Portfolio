@@ -208,10 +208,6 @@ main{
     grid-column: span 1;
 }
 
-.project_tech_image:hover{
-    box-shadow: 0 10px 20px rgba(118,144,179, 1);
-}
-
 .project_buttons {
     display: grid;
     gap:1rem;
