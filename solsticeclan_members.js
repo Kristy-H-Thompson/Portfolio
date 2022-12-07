@@ -657,8 +657,6 @@ function openInNewTab(url) {
 
 
 
-form = document.forms["SolsticeClanJoining"];
-      //Setting up locations for all of the character ranks
     const priest_location = document.getElementById("priest");
     const sun_location = document.getElementById("scsuns");
     const moon_location = document.getElementById("scmoons");
@@ -667,37 +665,6 @@ form = document.forms["SolsticeClanJoining"];
     const elder_location = document.getElementById("scelders");
     const gallery_location = document.getElementById("scgallery");
     const thisclanname = "SolsticeClan";
-  $.ajax({
-    crossOrigin: true,
-    url: scriptURL,
-    success: function(data) {
-      getText(data);
-      console.log('AJAX request completed successfully onload and information has been fetched from HG Database.')
-
-    },
-    dataType: 'text'
-  });
-	
-	
-// Create a Cat Object
-function Cat(timestamp, name, rper, physical, traits, characterimage, rank, zodiac, status, parent1, parent2, bloodtype, power, hybrid, malady) {
-    this.timestamp = timestamp,
-    this.name = name,
-    this.rper = rper,
-    this.physical = physical,
-    this.traits = traits,
-    this.characterimage = characterimage,
-    this.rank = rank,
-    this.zodiac = zodiac,
-    this.status = status,
-    this.parent1 = parent1,
-    this.parent2 = parent2,
-    this.bloodtype = bloodtype,
-    this.power = power,
-    this.hybrid = hybrid,
-    this.magicmalady = malady
-}
-
 
 //Function used to load characters
 function loadARank(loc, current_rank, catlist) {
@@ -793,59 +760,6 @@ function catfilter(cha, r = "", user = "", zodiac = "", status = "") {
 }
 
 
-//This function
-function catfilterarray(
-  tempchars,
-  r = "",
-  user = "",
-  zodiac = "",
-  status = ""
-) {
-  l = [];
-  char = [];
-  for (i = 0; i < tempchars.length; i++) {
-    if (
-      (tempchars[i].rper == user || user == "") &&
-      (tempchars[i].rank == r || r == "") &&
-      (tempchars[i].zodiac == zodiac || zodiac == "") &&
-      tempchars[i].status != "Archived" &&
-      status != "Archived"
-    ) {
-      l +=
-        tempchars[i].name +
-        " rp'd by " +
-        tempchars[i].rper +
-        " - " +
-        tempchars[i].bloodtype +
-        "<br>" +
-        tempchars[i].physical +
-        "<br>" +
-        tempchars[i].traits +
-        "<br>Zodiac: " +
-        tempchars[i].zodiac +
-        "<br><br>";
-      char.push(tempchars[i]);
-    } else if (status == "Archived" && tempchars[i].status == "Archived") {
-      l +=
-        tempchars[i].name +
-        " rp'd by " +
-        tempchars[i].rper +
-        " - " +
-        tempchars[i].bloodtype +
-        "<br>" +
-        tempchars[i].physical +
-        "<br>" +
-        tempchars[i].traits +
-        "<br>Zodiac: " +
-        tempchars[i].zodiac +
-        "<br><br>";
-      char.push(tempchars[i]);
-    }
-  }
-  return char;
-}
-
-
 //This function tells the page how to display cats in the gallery
 function catgallery(cha, user = "", zodiac = "", status = "") {
   l = "";
@@ -878,90 +792,6 @@ function catgallery(cha, user = "", zodiac = "", status = "") {
 }
 
 
-//Counting # of chars
-function countCats() {
-  $("priestcount").text(priest_chars.length);
-  $("appcount").text(app_chars.length);
-  $("mooncount").text(moon_chars.length);
-  $("suncount").text(sun_chars.length);
-  $("kitcount").text(kit_chars.length);
-  $("eldercount").text(elder_chars.length);
-  $("totalcount").text(chars.length);
-
-  bloods = sumBloods();
-
-  $("dcount").text(
-    String(bloods[0]) +
-      " cats - " +
-      String(
-        Math.round(
-          (bloods[0] / (bloods[0] + bloods[1] + bloods[2] + bloods[3])) * 100
-        )
-      ) +
-      "%"
-  );
-  $("ecount").text(
-    String(bloods[1]) +
-      " cats - " +
-      String(
-        Math.round(
-          (bloods[1] / (bloods[0] + bloods[1] + bloods[2] + bloods[3])) * 100
-        )
-      ) +
-      "%"
-  );
-  $("acount").text(
-    String(bloods[2]) +
-      " cats - " +
-      String(
-        Math.round(
-          (bloods[2] / (bloods[0] + bloods[1] + bloods[2] + bloods[3])) * 100
-        )
-      ) +
-      "%"
-  );
-  $("aacount").text(
-    String(bloods[3]) +
-      " cats - " +
-      String(
-        Math.round(
-          (bloods[3] / (bloods[0] + bloods[1] + bloods[2] + bloods[3])) * 100
-        )
-      ) +
-      "%"
-  );
-}
-
-function sumBloods() {
-  d = 0;
-  e = 0;
-  a = 0;
-  aa = 0;
-
-  for (i = 0; i < chars.length; i++) {
-    switch (chars[i].bloodtype) {
-      case "Diamond Blood":
-        d += 1;
-        break;
-
-      case "Emerald Blood":
-        e += 1;
-        break;
-
-      case "Amethyst Blood":
-        a += 1;
-        break;
-
-      case "Amber Blood":
-        aa += 1;
-        break;
-    }
-  }
-
-  return [d, e, a, aa];
-}
-
-
 //Sorting by Zodiac Signs
 function sortZodiac(loc, chars, rank, viewName) {
   chars.sort(function (x, y) {
@@ -990,42 +820,6 @@ function sortallZodiac() {
   sortZodiac(elder_location, elder_chars, "Elder", "allegiances");
   sortZodiac(gallery_location, chars, "", "gallery");
 }
-
-//flags this character as pending
-function flagStatus() {
-  for (i = 0; i < chars.length; i++) {
-    console.log("hello world");
-    if (chars[i].status.toLowerCase() == "pending") {
-      chars[i].name = "<pending>" + chars[i].name + "</pending>";
-      chars[i].characterimage =
-        "https://images.unsplash.com/photo-1511044568932-338cba0ad803?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80";
-    }
-  }
-}
-
-
-//Joining Form- Submit a Character
-form = document.forms["SolsticeClanJoining"];
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const bt = callme();
-  document.getElementById("blood1type").value = bt;
-  fetch(scriptURL, {
-    method: "POST",
-    body: new FormData(form),
-    mode: "no-cors"
-  })
-    .then((response) =>
-      alert(
-        "Character submitted! \n \n Your character's blood type is " +
-          bt +
-          " ^^",
-        response
-      )
-    )
-    .catch((error) => alert("Error!", error.message));
-});
-
 
 // Username Search
 function submituser() {
