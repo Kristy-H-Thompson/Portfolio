@@ -12,6 +12,9 @@ body {
     --white: #f8f8ff;
     --lightblue: #ADC0D9;
     --bluetwo: #91AACC;
+    --bluethree: #6C85A6;
+    --bluefour: #7690B3;
+    --darkblue: #6C85A6;
 }
 
 h1 {
@@ -22,6 +25,7 @@ h1 {
 }
 
 h2{
+    color: var(--darkblue);
     font-family: 'Forum', cursive;
     font-size:250%;
     font-weight: bold;
