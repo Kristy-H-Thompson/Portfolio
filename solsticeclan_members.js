@@ -678,7 +678,7 @@ function openView(evt, viewName) {
 }
 
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+document.getElementById("defaultopen").click();
 
 
 //Display more  character information on click
