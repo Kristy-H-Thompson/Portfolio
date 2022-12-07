@@ -11,6 +11,7 @@ body {
     --black: #1B1212;
     --white: #f8f8ff;
     --lightblue: #ADC0D9;
+    --bluetwo: #91AACC;
 }
 
 h1 {
@@ -114,7 +115,7 @@ main{
 }
 
 .about_me_image{
-    background-color: var(--lightblue);;
+    background-color: var(--bluetwo);;
     border-radius:15%;
     grid-column: span 1;
     height:100%;
