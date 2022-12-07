@@ -216,7 +216,7 @@ main{
 }
 
 .project_buttons button{
-    background-color:transparent
+    background-color:transparent;
     border: 1px solid var(--black);
     color:var(--black);
     font-family: 'Forum', cursive;
