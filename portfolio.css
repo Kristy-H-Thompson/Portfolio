@@ -214,7 +214,7 @@ main{
 }
 
 .project_buttons button{
-    background-color:var(--bluefour);
+    background-color:transparent
     border: 1px solid var(--black);
     color:var(--black);
     font-family: 'Forum', cursive;
@@ -223,7 +223,7 @@ main{
 }
 
 .project_buttons button:hover{
-    background-color:var(--lightblue);
+    background-color:var(--bluetwo);
 }
 
 
