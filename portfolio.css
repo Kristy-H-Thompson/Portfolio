@@ -115,7 +115,7 @@ main{
 .about_me_grid {
     display:grid;
     gap:1rem;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     justify-content: space-evenly;
     width:100%;
 }
@@ -131,9 +131,9 @@ main{
 }
 
 .about_me_image img{
-    height:4rem;
+    height:2.5rem;
     margin:.5rem;
-    width:4.5rem;
+    width:3rem;
 }
 
 #projects{
