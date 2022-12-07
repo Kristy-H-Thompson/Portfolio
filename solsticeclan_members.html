@@ -353,17 +353,17 @@ var chars = [];
     const gallery_location = document.getElementById("scgallery");
     const thisclanname = "SolsticeClan";
   
-  
+window.onload = function () {
   $.ajax({
     crossOrigin: true,
     url: scriptURL,
     success: function(data) {
       getText(data);
       console.log('AJAX request completed successfully onload and information has been fetched from HG Database.')
-
     },
     dataType: 'text'
   });
+}
 	
 	
 // Create a Cat Object
@@ -992,3 +992,4 @@ function displaycatonclick(solscharactername) {
 function openInNewTab(url) {
   window.open(url, "_blank").focus();
 }    
+</script>
