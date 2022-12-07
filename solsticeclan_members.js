@@ -846,31 +846,3 @@ function submituser() {
   gallery_chars = catfilterarray(chars, "", user);
   gallery_location.innerHTML = catgallery(gallery_chars, "");
 }
-
-
-// Reset all sort/filters
-function resetCats() {
-  var cats = $(hiddenelement).text();
-  cats = cats.split(",");
-  chars = [];
-
-  for (i = 15; i < cats.length; i += 15) {
-    chars.push(
-      new Cat(
-        cats[i],
-        cats[i + 1],
-        cats[i + 2],
-        cats[i + 3],
-        cats[i + 4],
-        cats[i + 5],
-        cats[i + 6],
-        cats[i + 7],
-        cats[i + 8],
-        cats[i + 9],
-        cats[i + 10],
-        cats[i + 11],
-        cats[i + 12],
-        cats[i + 13],
-        cats[i + 14]
-      )
-    );
