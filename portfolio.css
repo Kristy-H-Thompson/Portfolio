@@ -10,6 +10,7 @@ body {
     
     --black: #1B1212;
     --white: #f8f8ff;
+    --lightblue: #ADC0D9;
 }
 
 h1 {
@@ -113,7 +114,7 @@ main{
 }
 
 .about_me_image{
-    background-color: #5D8087;
+    background-color: var(--lightblue);;
     border-radius:15%;
     grid-column: span 1;
     height:100%;
