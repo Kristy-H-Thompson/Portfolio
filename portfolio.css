@@ -207,7 +207,7 @@ main{
     grid-column: span 1;
 }
 
-.project_tech_image :hover{
+.project_tech_image:hover{
     box-shadow: 0 5px 15px rgba(145, 170, 204, .4);
 }
 
