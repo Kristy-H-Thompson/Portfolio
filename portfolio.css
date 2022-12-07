@@ -214,16 +214,16 @@ main{
 }
 
 .project_buttons button{
-    background-color:#46737A;
+    background-color:var(--blue4);
     border: 1px solid var(--black);
-    color:var(--white);
+    color:var(--black);
     font-family: 'Forum', cursive;
     font-size:90%;
     padding:.4rem;
 }
 
 .project_buttons button:hover{
-    background-color:#615C56;
+    background-color:var(--lightblue);
 }
 
 
