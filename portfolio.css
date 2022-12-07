@@ -156,7 +156,8 @@ main{
 }
 
 .project_box{
-    border:2px solid var(--black);
+    border:1px solid var(--black);
+    border-radius:10px;
     display:grid;
     gap:.5rem;
     grid-template-columns: auto auto;
@@ -241,7 +242,7 @@ main{
 
 .emailform{
     background-color:var(--lightblue);
-    border: 2px solid var(--black);
+    border: 1px solid var(--black);
     border-radius:10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     color:var(--black);
