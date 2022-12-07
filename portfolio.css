@@ -33,6 +33,7 @@ h2{
 }
 
 h3 {
+    color: var(--darkblue);
     font-family: 'Forum', cursive;
     font-size:180%;
     font-weight: bold;
