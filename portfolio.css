@@ -200,6 +200,7 @@ main{
 }
 
 .project_tech_image{
+    border-radius:5%;
     display:inline;
     height:2rem;
     margin:3%;
@@ -208,7 +209,7 @@ main{
 }
 
 .project_tech_image:hover{
-    box-shadow: 0 5px 15px rgba(118,144,179, .8);
+    box-shadow: 0 5px 15px rgba(118,144,179, 1);
 }
 
 .project_buttons {
