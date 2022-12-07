@@ -74,7 +74,7 @@ nav li a:hover{
 .side_bar {
     background-image:url("https://images.unsplash.com/photo-1612211893937-bbdf77ab593b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
     background-size:cover;
-    border-right: 3px soid var(--black);
+    border-right: 3px solid var(--black);
     box-sizing: border-box;
     filter: hue-rotate(50deg);
     grid-column: span 1;
@@ -124,7 +124,7 @@ main{
 
 .about_me_image{
     background-color: var(--bluetwo);
-    border: 2px soid var(--black);
+    border: 1px solid var(--black);
     border-radius:15%;
     grid-column: span 1;
     height:100%;
@@ -241,7 +241,7 @@ main{
 
 .emailform{
     background-color:var(--lightblue);
-    border: 2px soid var(--black);
+    border: 2px solid var(--black);
     border-radius:10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     color:var(--black);
