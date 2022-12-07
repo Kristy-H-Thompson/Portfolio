@@ -651,13 +651,11 @@ function callme() {
   return bloodtype;
 }
   
-
-//Page Tabs
 function openView(evt, viewName) {
-  var i, viewcharacters, viewlinks;
-  viewcharacters = document.getElementsByClassName("viewcharacters");
+  var i, tabcontent, viewlinks;
+  viewcharacters =  document.getElementsByClassName("viewcharacters");
   for (i = 0; i < viewcharacters.length; i++) {
-    viewcharacters[i].style.display = "none";
+    viewcharacters [i].style.display = "none";
   }
   viewlinks = document.getElementsByClassName("viewlinks");
   for (i = 0; i < viewlinks.length; i++) {
@@ -665,20 +663,22 @@ function openView(evt, viewName) {
   }
   document.getElementById(viewName).style.display = "block";
   evt.currentTarget.className += " active";
-}
-  if (viewName == "archive" || viewName == "sol-statistics") {
-    document.getElementById("filter").style.display = "none";
-    document.getElementById("username1").style.display = "none";
-  }
 
-  if (viewName == "allegiances" || viewName == "gallery") {
-    document.getElementById("filter").style.display = "block";
-    document.getElementById("username1").style.display = "block";
-  }
+if (viewName == "archive" || viewName == "sol-statistics"){
+	document.getElementById('filter').style.display = "none";
+	document.getElementById('username1').style.display = "none";
+}
+
+if (viewName == "allegiances" || viewName == "gallery"){
+	document.getElementById('filter').style.display = "block";
+	document.getElementById('username1').style.display = "block";
+}
+
 }
 
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultopen").click();
+document.getElementById("defaultOpen").click();
+
 
 
 //Display more  character information on click
