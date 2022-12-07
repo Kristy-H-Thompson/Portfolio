@@ -107,6 +107,7 @@ main{
 
 #about{
     height:100vh;
+    margin-bottom:2rem;
     min-height:600px;
     width:100%;
 }
@@ -227,6 +228,7 @@ main{
 
 #contact{
     height:100vh;
+    margin-bottom:2rem;
     min-height:600px;
     width:100%;
 }
