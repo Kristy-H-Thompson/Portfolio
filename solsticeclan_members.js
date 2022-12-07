@@ -657,7 +657,14 @@ function openInNewTab(url) {
 
 
 
-
+const priest_location = document.getElementById("priest");
+    const sun_location = document.getElementById("scsuns");
+    const moon_location = document.getElementById("scmoons");
+    const apps_location = document.getElementById("solsticeclanapprentices");
+    const kits_location = document.getElementById("sckits");
+    const elder_location = document.getElementById("scelders");
+    const gallery_location = document.getElementById("scgallery");
+    const thisclanname = "SolsticeClan";
 
 
 
