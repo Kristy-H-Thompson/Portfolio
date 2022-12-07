@@ -124,7 +124,7 @@ main{
     border-radius:15%;
     grid-column: span 1;
     height:100%;
-    padding:1rem;
+    padding:.5rem;
     text-align: center;
     width:100%;
 }
