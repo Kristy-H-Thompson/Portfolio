@@ -652,6 +652,18 @@ function callme() {
 }
 
 
+
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
   
 
 //Page Tabs
@@ -667,7 +679,7 @@ function openView(evt, viewName) {
   }
   document.getElementById(viewName).style.display = "block";
   evt.currentTarget.className += " active";
-
+}
   if (viewName == "archive" || viewName == "sol-statistics") {
     document.getElementById("filter").style.display = "none";
     document.getElementById("username1").style.display = "none";
