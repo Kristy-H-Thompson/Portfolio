@@ -652,9 +652,11 @@ function callme() {
 }
 
 
+  
+
 //Page Tabs
 function openView(evt, viewName) {
-  var i, tabcontent, viewlinks;
+  var i, viewcharacters, viewlinks;
   viewcharacters = document.getElementsByClassName("viewcharacters");
   for (i = 0; i < viewcharacters.length; i++) {
     viewcharacters[i].style.display = "none";
