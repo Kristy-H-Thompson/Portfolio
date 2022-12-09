@@ -648,6 +648,104 @@ function sumBloods() {
 }
 
 
+	  
+function sortRev(loc, chars, rank="", viewName="") {
+
+chars.sort(function (x, y) {
+    let a = x.name.toUpperCase();
+        b = y.name.toUpperCase();
+        return a == b ? 0 : a > b ? 1 : -1;
+    });
+
+chars.sort(function (x, y) {
+    return x.name - y.name;
+    }); 
+
+
+if (viewName == "allegiances"){
+        chars.reverse();
+        loc.innerHTML = catfilter(chars, rank);
+    }
+
+else if (viewName == "gallery"){
+        chars.reverse();
+        loc.innerHTML = catgallery(chars, rank);
+    }
+else if (viewName == "adoptable"){
+        chars.reverse();
+        loc.innerHTML = catfilter(chars, rank);
+    }
+
+else {
+	console.log("help");
+}
+
+}
+
+
+
+
+function alphabet(loc, chars, rank="", viewName="") {
+
+    chars.sort(function (x, y) {
+        let a = x.name.toUpperCase();
+                b = y.name.toUpperCase();
+            return a == b ? 0 : a > b ? 1 : -1;
+    });
+
+    chars.sort(function (x, y) {
+            return x.name - y.name;
+    });
+ 
+
+
+ if (viewName == "allegiances"){
+        loc.innerHTML = catfilter(chars, rank);
+    }
+
+else if (viewName == "gallery"){
+        loc.innerHTML = catgallery(chars, rank);
+    }
+else if (viewName == "adoptable"){
+        loc.innerHTML = catgallery(chars, rank);
+    }
+
+else {
+	console.log("help");
+}
+
+
+
+    
+}
+
+function allsort() {
+
+	alphabet(priest_location, priest_chars, "Priest", "allegiances");
+	alphabet(apps_location, app_chars, "Apprentice", "allegiances");
+	alphabet(sun_location, sun_chars, "Sun Warrior", "allegiances");
+	alphabet(moon_location, moon_chars, "Moon Warrior", "allegiances");
+	alphabet(kits_location, kit_chars, "Kit", "allegiances");
+	alphabet(elder_location, elder_chars, "Elder", "allegiances");
+	alphabet(gallery_location, chars, "", "gallery");
+	alphabet(adoptable_location, adoptable_chars, "", "adoptable");
+
+};
+
+function allrevsort() {
+	sortRev(priest_location, priest_chars, "Priest", "allegiances");
+	sortRev( apps_location, app_chars, "Apprentice", "allegiances");
+	sortRev(sun_location, sun_chars, "Sun Warrior", "allegiances");
+	sortRev( moon_location, moon_chars, "Moon Warrior", "allegiances");
+	sortRev( kits_location, kit_chars, "Kit", "allegiances");
+	sortRev(elder_location, elder_chars, "Elder", "allegiances");
+	sortRev(gallery_location, chars, "", "gallery");
+	sortRev(adoptable_location, adoptable_chars, "", "adoptable");
+};
+
+	  
+	  
+
 //Sorting by Zodiac Signs
 function sortZodiac(loc, chars, rank, viewName) {
   chars.sort(function (x, y) {
