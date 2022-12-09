@@ -671,10 +671,6 @@ else if (viewName == "gallery"){
         chars.reverse();
         loc.innerHTML = catgallery(chars, rank);
     }
-else if (viewName == "adoptable"){
-        chars.reverse();
-        loc.innerHTML = catfilter(chars, rank);
-    }
 
 else {
 	console.log("help");
@@ -706,9 +702,6 @@ function alphabet(loc, chars, rank="", viewName="") {
 else if (viewName == "gallery"){
         loc.innerHTML = catgallery(chars, rank);
     }
-else if (viewName == "adoptable"){
-        loc.innerHTML = catgallery(chars, rank);
-    }
 
 else {
 	console.log("help");
@@ -729,7 +722,6 @@ function allsort() {
 	alphabet(kits_location, kit_chars, "Kit", "allegiances");
 	alphabet(elder_location, elder_chars, "Elder", "allegiances");
 	alphabet(gallery_location, chars, "", "gallery");
-	alphabet(adoptable_location, adoptable_chars, "", "adoptable");
 
 };
 
@@ -741,7 +733,6 @@ function allrevsort() {
 	sortRev( kits_location, kit_chars, "Kit", "allegiances");
 	sortRev(elder_location, elder_chars, "Elder", "allegiances");
 	sortRev(gallery_location, chars, "", "gallery");
-	sortRev(adoptable_location, adoptable_chars, "", "adoptable");
 };
 
 	  
