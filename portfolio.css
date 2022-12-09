@@ -364,6 +364,7 @@ main{
 }
 
 #map {
-  height: 400px;
+  background-color:gray;
+   height: 400px;
   width: 100%;
 }
