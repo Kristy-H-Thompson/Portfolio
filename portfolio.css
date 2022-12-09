@@ -339,6 +339,7 @@ main{
     display:inline;
     grid-column: span 1;
     height:100vh;
+    margin-left:1rem;
     padding:2rem;
     overflow:auto;
     width:95%;
