@@ -348,7 +348,7 @@ main{
     float:left;
     margin-bottom:2rem;
     margin-right:.5rem;
-    width:12rem;
+    width:10%;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
