@@ -348,7 +348,7 @@ main{
     float:left;
     margin-bottom:2rem;
     margin-right:.5rem;
-    width:10%;
+    width:12rem;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
@@ -358,5 +358,5 @@ main{
 }
 
 .startstar_info_box{
-    margin:5rem auto;
+    margin:5rem;
 }
