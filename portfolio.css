@@ -339,7 +339,6 @@ main{
     display:inline;
     grid-column: span 1;
     height:100vh;
-    margin-left:15%;
     padding:2rem;
     overflow:auto;
     width:95%;
@@ -361,5 +360,4 @@ main{
 
 .startstar_info_box{
     margin:5rem;
-       display:inline;
 }
