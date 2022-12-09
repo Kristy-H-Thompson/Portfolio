@@ -847,7 +847,6 @@ function resetCats() {
 	kit_chars = catfilterarray(chars, 'Kit');
 	elder_chars = catfilterarray(chars, 'Elder');
 	archive_chars = catfilterarray(chars, '', '', '', status="Archived");
-	adoptable_chars = catfilterarray(chars, '', '', '', status="adoptable");
 
 
 	loadARank(priest_location, "Priest", priest_chars);
@@ -857,7 +856,6 @@ function resetCats() {
 	loadARank(kits_location, "Kit", kit_chars);
 	loadARank(elder_location, "Elder", elder_chars);
 	loadAGallery(gallery_location, chars);
-	loadAGallery(adoptable_location, chars);
 
 }
 
