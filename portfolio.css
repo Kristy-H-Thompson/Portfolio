@@ -79,7 +79,7 @@ nav li a:hover{
     filter: hue-rotate(50deg);
     grid-column: span 1;
     height:100%;
-    min-width:10rem;
+    min-width:12rem;
     padding:0px;
     width:100%;
 }
