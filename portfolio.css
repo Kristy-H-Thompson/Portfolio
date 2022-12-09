@@ -362,3 +362,8 @@ main{
     margin:1rem;
     margin-bottom:6rem;
 }
+
+#map {
+  height: 400px;
+  width: 100%;
+}
