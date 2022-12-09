@@ -310,7 +310,7 @@
             <button id="zodiacsort" onclick="sortallZodiac()">
               <img class="sorting-img" alt="sory by zodiac" src="https://i.imgur.com/2qNcJRm.png">
             </button>
-            <button id="resetfilter" class="sorting-img" onclick="resetCats()">
+            <button id="resetfilter" class="sorting-img" onclick="resetCats(cats)">
               <img class="sorting-img" alt="reset filters" src="https://images-ext-1.discordapp.net/external/BuaWIF-XdD9HK3lJ1c1Tif87039a2D4sacNIGtkXYYM/https/cdn-icons-png.flaticon.com/512/32/32418.png">
             </button>
           </div>
@@ -397,7 +397,7 @@ function loadAGallery(loc, catlist) {
 }
 
 
-//This creates new Cat objects from the spreadsheet, and sends them to display on the page
+//This creates new Catf objects from the spreadsheet, and sends them to display on the page
 function getText(cats) {
   cats = cats.split(',');
   for (i = 15; i < cats.length; i += 15) {
@@ -831,8 +831,7 @@ function submituser() {
 
 
 // Reset all sort/filters
-function resetCats() {
-	var cats = $(hiddenelement).text();
+function resetCats(cats) {
 	cats = cats.split(',');
 	chars = [];
 	
