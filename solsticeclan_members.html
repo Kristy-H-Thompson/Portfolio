@@ -648,7 +648,7 @@ function sumBloods() {
 }
 
 
-	  
+//Sorting a->z and z->a
 function sortRev(loc, chars, rank="", viewName="") {
 
 chars.sort(function (x, y) {
@@ -719,6 +719,7 @@ else {
     
 }
 
+	 
 function allsort() {
 
 	alphabet(priest_location, priest_chars, "Priest", "allegiances");
@@ -840,50 +841,36 @@ function submituser() {
 
 // Reset all sort/filters
 function resetCats() {
-  var cats = $(hiddenelement).text();
-  cats = cats.split(",");
-  chars = [];
-
-  for (i = 15; i < cats.length; i += 15) {
-    chars.push(
-      new Cat(
-        cats[i],
-        cats[i + 1],
-        cats[i + 2],
-        cats[i + 3],
-        cats[i + 4],
-        cats[i + 5],
-        cats[i + 6],
-        cats[i + 7],
-        cats[i + 8],
-        cats[i + 9],
-        cats[i + 10],
-        cats[i + 11],
-        cats[i + 12],
-        cats[i + 13],
-        cats[i + 14]
-      )
-    );
-  }
-
-  priest_chars = catfilterarray(chars, "Priest");
-  app_chars = catfilterarray(chars, "Apprentice");
-  sun_chars = catfilterarray(chars, "Sun Warrior");
-  moon_chars = catfilterarray(chars, "Moon Warrior");
-  kit_chars = catfilterarray(chars, "Kit");
-  elder_chars = catfilterarray(chars, "Elder");
-  archive_chars = catfilterarray(chars, "", "", "", (status = "Archived"));
-
-  loadARank(priest_location, "Priest", priest_chars);
-  loadARank(apps_location, "Apprentice", app_chars);
-  loadARank(sun_location, "Sun Warrior", sun_chars);
-  loadARank(moon_location, "Moon Warrior", moon_chars);
-  loadARank(kits_location, "Kit", kit_chars);
-  loadARank(elder_location, "Elder", elder_chars);
-
-  loadAGallery(gallery_location, chars);
-}
+	var cats = $(hiddenelement).text();
+	cats = cats.split(',');
+	chars = [];
 	
+	for (i=15;i<cats.length;i+=15) {
+		chars.push(new Cat(cats[i], cats[i+1],cats[i+2],cats[i+3],cats[i+4],cats[i+5],cats[i+6],cats[i+7], cats[i+8],cats[i+9],cats[i+10], cats[i+11], cats[i+12], cats[i+13], cats[i+14]));
+	}
+
+	priest_chars = catfilterarray(chars, 'Priest');
+	app_chars = catfilterarray(chars, 'Apprentice');
+	sun_chars = catfilterarray(chars, 'Sun Warrior');
+	moon_chars = catfilterarray(chars, 'Moon Warrior');
+	kit_chars = catfilterarray(chars, 'Kit');
+	elder_chars = catfilterarray(chars, 'Elder');
+	archive_chars = catfilterarray(chars, '', '', '', status="Archived");
+	adoptable_chars = catfilterarray(chars, '', '', '', status="adoptable");
+
+
+	loadARank(priest_location, "Priest", priest_chars);
+	loadARank(apps_location, "Apprentice", app_chars);
+	loadARank(sun_location, "Sun Warrior", sun_chars);
+	loadARank(moon_location, "Moon Warrior", moon_chars);
+	loadARank(kits_location, "Kit", kit_chars);
+	loadARank(elder_location, "Elder", elder_chars);
+	loadAGallery(gallery_location, chars);
+	loadAGallery(adoptable_location, chars);
+
+}
+
+
   
 
 //Character Archive
@@ -1013,6 +1000,8 @@ function callme() {
   return bloodtype;
 }
   
+
+//tabs	  
 function openView(evt, viewName) {
   var i, tabcontent, viewlinks;
   viewcharacters =  document.getElementsByClassName("viewcharacters");
